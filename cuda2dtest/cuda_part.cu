@@ -18,15 +18,16 @@ void cuda_run(void *arr, size_t pitch) {
 	float a, b;
 
 	if (id < 25) {
-		float *row_a = (float *)((char *)arr + y * pitch);
-		a = row_a[x];
+		float *row = (float *)((char *)arr + y * pitch);
+		a = row[x];
 		
-		row_a[x] += 1;
-		b = row_a[x];
+		row[x] += 1;
+		b = row[x];
 		
 		printf("bye %d %f %f\n", id, a, b);
 	}
 	
+
 }
 
 

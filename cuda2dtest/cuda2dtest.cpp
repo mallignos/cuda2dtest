@@ -5,6 +5,7 @@
 #include <iostream>
 #include "cuda_part.cuh"
 
+//some nice printing
 void arr_print(float **arr) {
 	for (size_t i = 0; i < 5; i++)
 	{
@@ -16,6 +17,7 @@ void arr_print(float **arr) {
 	}
 }
 
+// allocates the array on the heap
 float **arr_alloc() {
 
 	float *big_arr = (float *)malloc(5 * 5 * sizeof(float));
@@ -29,7 +31,7 @@ float **arr_alloc() {
 	return arr;
 }
 
-
+// puts some nice numbers into the array
 void arr_populate(float **arr) {
 	for (size_t i = 0; i < 5; i++)
 	{
@@ -50,13 +52,3 @@ int main()
 	system("pause");
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
